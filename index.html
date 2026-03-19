@@ -1518,29 +1518,8 @@ termInput.addEventListener('keydown', e => {
 // Auto-focus terminal input on click anywhere in the terminal body
 document.querySelector('.ov-term-body').addEventListener('click', () => termInput.focus());
 
-/* ═══════════════════════════════════════════════════════════
-   AI CONFIGURATION
-   ─────────────────────────────────────────────────────────
-   TWO MODES — the code auto-detects which to use:
 
-   ① LOCAL DEV  (file:// or localhost)
-     Put your API key below. Never commit this to GitHub.
-     The key is only used when running locally.
-
-   ② GITHUB PAGES / public host
-     Leave API_KEY as empty string ''.
-     Set up the Cloudflare Worker (instructions in comments
-     at the bottom of this file) and paste your Worker URL.
-═══════════════════════════════════════════════════════════ */
-
-/* ── Step 1: Paste your Anthropic API key here for local dev ──
-   ⚠️  BEFORE PUSHING TO GITHUB:
-       Either remove your key (replace with 'sk-ant-YOUR-KEY-HERE')
-       OR add this file to .gitignore
-       The IS_LOCAL check means the key is never used on GitHub Pages,
-       but it will still be visible in your repo source code.
-── */
-const API_KEY = 'sk-ant-YOUR-KEY-HERE';   // ← replace this
+const API_KEY = '';   // ← replace this
 
 /* ── Step 2: After deploying Cloudflare Worker, paste URL here ── */
 const WORKER_URL = 'https://dhruvai.dhruvbhavsar912.workers.dev';
